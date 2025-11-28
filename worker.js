@@ -7,7 +7,7 @@ async function handleRequest(request) {
   const country = searchParams.get('country') || getRandomCountry()
   let address = null, name = 'Unknown', gender = 'Unknown', phone = getRandomPhoneNumber(country)
 
-  // 减少查询次数以避免超时或封IP
+  // 减少查询次数以避免超时&封IP
   for (let i = 0; i < 30; i++) {
     try {
       const location = getRandomLocationInCountry(country)
